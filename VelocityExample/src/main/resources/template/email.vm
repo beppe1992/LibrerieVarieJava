@@ -1,0 +1,10 @@
+$header
+$text
+#foreach( $line in $lines )
+#if($line == "")
+	XXX    
+#else
+$line 
+#end    
+#end
+$footer
