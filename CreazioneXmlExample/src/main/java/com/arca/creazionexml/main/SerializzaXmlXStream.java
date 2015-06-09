@@ -1,4 +1,4 @@
-package com.arca.creazionexml;
+package com.arca.creazionexml.main;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -39,7 +39,7 @@ import com.thoughtworks.xstream.io.xml.StaxDriver;
  * @author arx50011
  * 
  */
-public class SerializzaXmlMain {
+public class SerializzaXmlXStream {
 
 	/**
 	 * @param args
@@ -49,12 +49,12 @@ public class SerializzaXmlMain {
 	 */
 	public static void main(String[] args) throws MarshalException,
 			ValidationException, IOException {
-		SerializzaXmlMain main = new SerializzaXmlMain();
-		main.faiXMLXStream();
+		SerializzaXmlXStream main = new SerializzaXmlXStream();
+		main.faiXML();
 
 	}
 
-	public void faiXMLXStream() throws FileNotFoundException, MarshalException,
+	public void faiXML() throws FileNotFoundException, MarshalException,
 			ValidationException {
 		Root xml = new Root();
 
@@ -79,30 +79,6 @@ public class SerializzaXmlMain {
 		xStream.aliasPackage("", "com.arca.creazionexml.xml");
 		xStream.autodetectAnnotations(true);
 		System.out.println("XML XSTREAM: \n"+xStream.toXML(xml));
-
-		// LIBRERIA CASTROR
-		StringWriter string = new StringWriter();		
-		try {
-			
-			Mapping mapping = new Mapping();  
-            // 1. Load the mapping information from the file
-            mapping.loadMapping( "src/main/resources/CastrorConfiguration.xml" );
-			Marshaller mar = new Marshaller(string);
-			mar.setMapping(mapping);
-			mar.setSuppressXSIType(true);
-			
-			mar.marshal(xml);
-			
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MappingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		System.out.println("XML CASTROR: \n"+string.toString());
 
 	}
 
