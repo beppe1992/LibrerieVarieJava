@@ -1,7 +1,7 @@
 # Progetto ApprofodimentiSpring
 In questo progetto si sono approfonditi i seguenti temi di Spring:<br>
 1. Spel Spring (validazione tramite Spel)<br>
-	La classe che fa la validazione si chiama SpelValidator, ed è richiamata dalla classe di test SpelValidationTest	  
+	La classe che fa la validazione si chiama SpelValidator, ed è richiamata dalla classe di test SpelValidationTest<br>	 
 2.  ValidatingItemProcessor<br>
 	Il test del processor Spring è stato fatto utilizzando la classe di test ValidatingItemProcessorTest
 	
@@ -26,6 +26,8 @@ Si è simulata la creazione di un "Document" (assomiglia ad un dto) con id avt00
 Abbiamo creato un "Service" per accedere alla collezione di dati (Avt005TbService).<br>
 Il tutto è stato testato attraverso la classe MongoDBTest, la quale recupera i dati da un DB in ram e li inserisce nel NoSQL DB,
 per poi ricercarli.<br>
+
+## Configurazioni necessarie
 ATTENZIONE!!!!!!!! SERVE LA PARTE SERVER PER UTILIZZARE QUESTO ESEMPIO
 
 # Progetto PdfBoxExample
