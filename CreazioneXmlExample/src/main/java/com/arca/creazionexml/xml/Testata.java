@@ -3,71 +3,86 @@ package com.arca.creazionexml.xml;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.arca.creazionexml.xstream.LeftPadConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
+
 public class Testata {
 
 	@XStreamAlias("SOCIETA")
 	private Integer societa;
-	
+
 	@XStreamAlias("NUMEROPOLIZZA")
 	private BigDecimal numeroPolizza;
-	
+
+	@XStreamConverter(value = LeftPadConverter.class, ints = { 14 }, strings = { "0" })
+	@XStreamAlias("NUMEROPOLIZZACONVERTER")
+	private BigDecimal numeroPolizzaConverter;
+
 	@XStreamAlias("NUMEROPROPOSTA")
 	private BigDecimal numeroProposta;
-	
+
 	@XStreamAlias("DATASCADENZAPROPOSTA")
 	private Date dataScadenzaProposta;
-	
+
 	@XStreamAlias("NUMEROPOLIZZASOSTITUITA")
 	private BigDecimal numeroPolizzaSostituita;
-	
+
 	@XStreamAlias("MOTIVOSOSTITUZIONE")
 	private String motivoSostituzione;
-	
+
 	@XStreamAlias("CONVENZIONE")
 	private String convenzione;
-	
+
 	@XStreamAlias("CODFILIALE")
 	private String codFiliale;
-	
+
 	@XStreamAlias("DESCRFILIALE")
 	private String descrFiliale;
-	
+
 	@XStreamAlias("DATASTAMPALETTERA")
 	private Date dataStampaLettera;
-	
+
 	@XStreamAlias("CODICEPRODOTTO")
 	private String codiceProdotto;
-	
+
 	@XStreamAlias("DESCRPRODOTTO")
 	private String descrProdotto;
-	
+
 	@XStreamAlias("CODBANCA")
 	private String codBanca;
-	
+
 	@XStreamAlias("DESCRBANCA")
 	private String descrBanca;
-	
+
 	@XStreamAlias("EDIZIONICGA")
 	private String edizioniCga;
-	
+
 	@XStreamAlias("CHECKDIGIT")
 	private String checkDigit;
-	
+
 	@XStreamAlias("OPERATORE")
 	private String operatore;
-	
+
 	@XStreamAlias("FORZATURAANIA")
 	private String forzaturaAnia;
-	
+
 	@XStreamAlias("IBAN")
 	private String iban;
-	
+
 	@XStreamAlias("PRIVACY")
 	private String privacy;
-	
+
 	@XStreamAlias("CODICEALLEGATO")
 	private Integer codiceAllegato;
+
+	public BigDecimal getNumeroPolizzaConverter() {
+		return numeroPolizzaConverter;
+	}
+
+	public void setNumeroPolizzaConverter(BigDecimal numeroPolizzaConverter) {
+		this.numeroPolizzaConverter = numeroPolizzaConverter;
+	}
 
 	public Integer getSocieta() {
 		return societa;
@@ -78,11 +93,11 @@ public class Testata {
 	}
 
 	public BigDecimal getNumeroPolizza() {
-		return numeroPolizza;
+		return numeroPolizzaConverter;
 	}
 
 	public void setNumeroPolizza(BigDecimal numeroPolizza) {
-		this.numeroPolizza = numeroPolizza;
+		this.numeroPolizzaConverter = numeroPolizza;
 	}
 
 	public BigDecimal getNumeroProposta() {
@@ -237,5 +252,4 @@ public class Testata {
 		this.codiceAllegato = codiceAllegato;
 	}
 
-		
 }

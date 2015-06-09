@@ -1,4 +1,4 @@
-package com.arca.creazionexml.main;
+package com.arca.creazionexml.groovy;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,7 +9,6 @@ import org.exolab.castor.xml.MarshalException;
 import org.exolab.castor.xml.ValidationException;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import com.arca.creazionexml.groovy.IBuildXmlExample;
 import com.arca.creazionexml.xml.Anagrafica;
 import com.arca.creazionexml.xml.Parametri;
 import com.arca.creazionexml.xml.Polizza;
