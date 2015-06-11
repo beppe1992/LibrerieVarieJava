@@ -1,5 +1,5 @@
-# Progetto ApprofodimentiSpring
-In questo progetto si sono approfonditi i seguenti temi di Spring:<br>
+# Progetto DataValidationSpringBatch
+In questo progetto si sono approfonditi i seguenti temi relativi alla validazione dati di Spring Batch:<br>
 1. Spel Spring (validazione tramite Spel)<br>
 	La classe che fa la validazione si chiama SpelValidator, ed è richiamata dalla classe di test SpelValidationTest<br>	 
 2.  ValidatingItemProcessor<br>
