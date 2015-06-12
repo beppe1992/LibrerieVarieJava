@@ -50,3 +50,5 @@ In questo progetto si sono fatti i seguenti esempi di utilizzo di spring aop:<br
 2. Intercetto la chiamata ad un metodo di una classe specifica ma che ha la seguente struttura *get*(..) (ed eseguo delle azioni dopo)
 3. Intercetto la chiamata ad un metodo specifico (ed eseguo delle azioni dopo utilizzando il dato restituito)
 4. Intercetto la chiamata ad un metodo specifico (ed eseguo delle azioni se va in errore)
+
+La classe che si occupa di eseguire le prove è SpringAopExample e si trova in /src/test/java
