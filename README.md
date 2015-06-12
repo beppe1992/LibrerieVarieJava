@@ -44,3 +44,9 @@ Sono stati fatti i seguenti esempi:<br>
 # Progetto VelocityExample
 In questo progetto si è approfondita la libreria Velocity. L'esempio (VelocityTemplate.java) crea una mail utilizzando un template.
 	
+# SpringAopExample
+In questo progetto si sono fatti i seguenti esempi di utilizzo di spring aop:<br>
+1. Intercetto la chiamata ad un metodo specifico (ed eseguo delle azioni prima)<br>
+2. Intercetto la chiamata ad un metodo di una classe specifica ma che ha la seguente struttura *get*(..) (ed eseguo delle azioni dopo)
+3. Intercetto la chiamata ad un metodo specifico (ed eseguo delle azioni dopo utilizzando il dato restituito)
+4. Intercetto la chiamata ad un metodo specifico (ed eseguo delle azioni se va in errore)
