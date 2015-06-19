@@ -44,7 +44,7 @@ Sono stati fatti i seguenti esempi:<br>
 # Progetto VelocityExample
 In questo progetto si è approfondita la libreria Velocity. L'esempio (VelocityTemplate.java) crea una mail utilizzando un template.
 	
-# SpringAopExample
+# Progetto SpringAopExample
 In questo progetto si sono fatti i seguenti esempi di utilizzo di spring aop:<br>
 1. Intercetto la chiamata ad un metodo specifico (ed eseguo delle azioni prima)<br>
 2. Intercetto la chiamata ad un metodo di una classe specifica ma che ha la seguente struttura *get*(..) (ed eseguo delle azioni dopo)
@@ -52,3 +52,12 @@ In questo progetto si sono fatti i seguenti esempi di utilizzo di spring aop:<br
 4. Intercetto la chiamata ad un metodo specifico (ed eseguo delle azioni se va in errore)
 
 La classe che si occupa di eseguire le prove è SpringAopExample e si trova in /src/test/java
+
+# Progetto TwipExample
+In questo progetto si è approfondita la libreria Twip che supporta JUnit nel test di classi Java. Sono stati fatti i seguenti test:<br>
+1. Esecuzione di test un test avente come parametro un boolean --> il test viene chiamato 2 volte, una passando true e una passando false (myTestWithBoolean)<br>
+2. Esecuzione di test un test avente come parametro un Integer --> il test viene chiamato n volte, passando interi positivi e negativi random(myTestWithInteger)<br>
+3. Esecuzione di test chiamati n volte passando dei parametri definiti in un array (myTestWithArrayDiParametri)<br>
+4. Esecuzione di test di cui si vogliono passare valori random diversi da null (myTestNotNull)<br>
+5. Esecuzione di test un test avente come parametro un Integer --> il test viene chiamato n volte, passando interi positivi e negativi , ma che rispettino uno standard (myTestNotZeroInteger)<br>
+6. Esecuzione di test chiamati n volte passando dei parametri definiti in un array di oggetti (myTestConObj)<br>
