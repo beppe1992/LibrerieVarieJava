@@ -61,3 +61,8 @@ In questo progetto si è approfondita la libreria Twip che supporta JUnit nel te
 4. Esecuzione di test di cui si vogliono passare valori random diversi da null (myTestNotNull)<br>
 5. Esecuzione di test un test avente come parametro un Integer --> il test viene chiamato n volte, passando interi positivi e negativi , ma che rispettino uno standard (myTestNotZeroInteger)<br>
 6. Esecuzione di test chiamati n volte passando dei parametri definiti in un array di oggetti (myTestConObj)<br>
+
+# Progetto JUnitTransactionalTestSpring
+In questo progetto è stato fatto un esempio dell'utilizzo della classe AbstractTransactionalJUnit4SpringContextTests utile a creare test transazionali.<br>
+Questa classe è utile in quanto da ad ogni singolo test una propria transazionalità, rendendoli così completamente indipendenti tra loro.<br>
+Esempio
