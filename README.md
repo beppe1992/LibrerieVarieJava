@@ -66,7 +66,7 @@ In questo progetto si è approfondita la libreria Twip che supporta JUnit nel te
 In questo progetto è stato fatto un esempio dell'utilizzo della classe AbstractTransactionalJUnit4SpringContextTests utile a creare test transazionali.<br>
 Questa classe è utile in quanto da ad ogni singolo test una propria transazionalità, rendendoli così completamente indipendenti tra loro.<br>
 <br>
-<b>Esempio</b>
+<b>Esempio</b><br>
 Abbiamo due test:<br>
 * Dobbiamo testare un metodo che inserisce un record sulla tabella A
 * Dobbiamo testare un metodo che fa una select sulla tabella A
