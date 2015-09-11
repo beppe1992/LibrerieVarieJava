@@ -1,4 +1,4 @@
-package it.spring.approfondimenti.ehcache;
+ package it.spring.approfondimenti.ehcache;
 
 
 
@@ -14,7 +14,7 @@ public class DaoCachedExample implements IDaoCachedExample {
 	
 	@Override
 	public String metodoCached(String nome) {
-		System.out.println("Chiamato metodo reale con nome= " + nome);
+		System.out.println("Chiamato metodo reale con nome = " + nome);
 		return nome.toUpperCase();
 	}
 
