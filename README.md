@@ -65,6 +65,30 @@ In questo progetto si è approfondita la libreria Twip che supporta JUnit nel te
 # Progetto JUnitTransactionalTestSpring
 In questo progetto è stato fatto un esempio dell'utilizzo della classe AbstractTransactionalJUnit4SpringContextTests utile a creare test transazionali.<br>
 Questa classe è utile in quanto da ad ogni singolo test una propria transazionalità, rendendoli così completamente indipendenti tra loro.<br>
+<<<<<<< .mine
+Esempio
+
+# Progetto ProvaLog4j2
+In questo progetto sono stati fatti alcuni esempi dell'utilizzo della libreria Apache Log4J2. <br>
+In src/test/ troviamo i seguenti esempi: <br>
+1. Console.java --> Log semplice su console <br>
+2. RollingFile.java --> Log su console e su file dando le seguenti impostazioni per quanto riguarda il FileAppender: scrivere nuovo file in base alla dimensione massima del file, numero di file da mantenere, cartella dove salvare i file di log di cui mantenere il backup, 
+non sovrascrivere il contenuto del file di log se non supera la dimensione massima, non scrivere direttamente su file ad ogni loggata ma mantieni in memoria e scrivi alla fine <br>
+3. RollingFileWithFilter.java --> Log su console e su file dando le seguenti impostazioni per quanto riguarda il FileAppender: scrivere nuovo file ad ogni esecuzione, numero di file da mantenere, cartella dove salvare i file di log di cui mantenere il backup, 
+non sovrascrivere il contenuto del file di log se non supera la dimensione massima, non scrivere direttamente su file ad ogni loggata ma mantieni in memoria e scrivi alla fine e scrivere su log solo
+le stringhe che rispettano un determinato standard indicato attraverso una regex <br>
+<br>
+In src/main/ troviamo un esempio di configurazione completa che utilizza le seguenti funzionalità:<br>
+1. Recupero di variabili da sistema (${sys:line.separator})
+2. Inserimento dell'header nel file di log (header=)
+3. Archivazione di file dopo il superamento di 1 KB di dimensione (SizeBasedTriggeringPolicy)
+4. Mantenimento di massimo 3 file (DefaultRolloverStrategy)
+5. Archiviazione di file in base al timing (TimeBasedTriggeringPolicy)
+6. Utilizzo di logger specifici e di logger "root"
+7. Indicazione sul log specifico (provaLogger) di non scrivere anche nel logger di root (additivity="false") quindi scrive solo sull'appender RollingFile e non su quelli di Root. Se la proprietà
+fosse true o non ci fosse utilizzerebbe anche gli appender di Root
+
+E' inoltre presente un file "log4j2_ESEMPIO_CONCRETO.xml" contenente una configurazione vera utilizzata in un batch per scrivere più file di log=======
 <br>
 <b>Esempio</b><br>
 Abbiamo due test:<br>
@@ -73,3 +97,4 @@ Abbiamo due test:<br>
 
 Se non usassimo la classe AbstractTransactionalJUnit4SpringContextTests i due test avrebbero la stessa transazione e non sarebbero indipendenti, in quanto il test che fa la select dipenderebbe da quello che fa la insert.<br>
 Utilizzando invece la classe AbstractTransactionalJUnit4SpringContextTests i test sono completamente indipendenti in quanto hanno ognuno la propria transazione.
+>>>>>>> .r27
