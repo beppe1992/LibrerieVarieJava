@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="log4j">log4j</Property>
+		<Property name="logReport">${log4j}/report</Property>
+		<Property name="logStorico">${log4j}/storico</Property>
+		<Property name="headerReportFile">BANCA | PRODOTTO | NUMERO PROPOSTA | DESCRIZIONE${sys:line.separator}
+		</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console">
+			<PatternLayout pattern="%d %-5p [%24F:%t:%L] - %m%n" />
+		</Console>
+		<RollingFile name="RollingFileCheckProposta" fileName="${log4j}/CheckProposta_Logs.log"
+			filePattern="${log4j}/CheckProposta_Logs-%i.log.zip" immediateFlush="false" append="true">
+			<PatternLayout pattern="%d %-5p %x [%C{1}] - %m%n" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="30 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="3" />
+		</RollingFile>
+		<RollingFile name="RollingFileReportPolizzaTrovata" fileName="${logReport}/reportPolizzaTrovata.log"
+			filePattern="${logStorico}/reportPolizzaTrovata-%d{yyyyMMdd}.log.zip" immediateFlush="true"
+			append="false">
+			<PatternLayout pattern="%m%n" header="${headerReportFile}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="RollingFileReportPolizzaErrata" fileName="${logReport}/reportPolizzaErrata.log"
+			filePattern="${logStorico}/reportPolizzaErrata-%d{yyyyMMdd}.log.zip" immediateFlush="true"
+			append="false">
+			<PatternLayout pattern="%m%n" header="${headerReportFile}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="RollingFileReportPiuProposteTrovate" fileName="${logReport}/reportPiuProposteTrovate.log"
+			filePattern="${logStorico}/reportPiuProposteTrovate-%d{yyyyMMdd}.log.zip" immediateFlush="true"
+			append="false">
+			<PatternLayout pattern="%m%n" header="${headerReportFile}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="RollingFileCheckProposta" />
+		</Root>
+		<Logger name="logPolizzaCorretta" level="INFO" additivity="false">
+			<AppenderRef ref="RollingFileReportPolizzaTrovata" />
+		</Logger>
+		<Logger name="logPolizzaErrata" level="INFO" additivity="false">
+			<AppenderRef ref="RollingFileReportPolizzaErrata" />
+		</Logger>
+		<Logger name="logPiuProposteTrovate" level="INFO" additivity="false">
+			<AppenderRef ref="RollingFileReportPiuProposteTrovate" />
+		</Logger>
+	</Loggers>
+</Configuration>
