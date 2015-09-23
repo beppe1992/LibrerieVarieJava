@@ -78,13 +78,13 @@ non sovrascrivere il contenuto del file di log se non supera la dimensione massi
 le stringhe che rispettano un determinato standard indicato attraverso una regex <br>
 <br>
 In src/main/ troviamo un esempio di configurazione completa che utilizza le seguenti funzionalità:<br>
-1. Recupero di variabili da sistema (${sys:line.separator})
-2. Inserimento dell'header nel file di log (header=)
-3. Archivazione di file dopo il superamento di 1 KB di dimensione (SizeBasedTriggeringPolicy)
-4. Mantenimento di massimo 3 file (DefaultRolloverStrategy)
-5. Archiviazione di file in base al timing (TimeBasedTriggeringPolicy)
-6. Utilizzo di logger specifici e di logger "root"
+1. Recupero di variabili da sistema (${sys:line.separator})<br>
+2. Inserimento dell'header nel file di log (header=)<br>
+3. Archivazione di file dopo il superamento di 1 KB di dimensione (SizeBasedTriggeringPolicy)<br>
+4. Mantenimento di massimo 3 file (DefaultRolloverStrategy)<br>
+5. Archiviazione di file in base al timing (TimeBasedTriggeringPolicy)<br>
+6. Utilizzo di logger specifici e di logger "root"<br>
 7. Indicazione sul log specifico (provaLogger) di non scrivere anche nel logger di root (additivity="false") quindi scrive solo sull'appender RollingFile e non su quelli di Root. Se la proprietà
-fosse true o non ci fosse utilizzerebbe anche gli appender di Root
+fosse true o non ci fosse utilizzerebbe anche gli appender di Root<br>
 
-E' inoltre presente un file "log4j2_ESEMPIO_CONCRETO.xml" contenente una configurazione vera utilizzata in un batch per scrivere più file di log
+E' inoltre presente un file "log4j2_ESEMPIO_CONCRETO.xml" contenente una configurazione vera utilizzata in un batch per scrivere più file di log.
