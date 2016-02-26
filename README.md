@@ -88,3 +88,11 @@ In src/main/ troviamo un esempio di configurazione completa che utilizza le segu
 fosse true o non ci fosse utilizzerebbe anche gli appender di Root<br>
 
 E' inoltre presente un file "log4j2_ESEMPIO_CONCRETO.xml" contenente una configurazione vera utilizzata in un batch per scrivere più file di log.
+
+# Progetto GuavaExample
+In questo progetto si è approfondita la libreria Guava (sviluppata da Google) che fornisce una suite di utility. Sono stati fatti i seguenti esempi delle funzionalità principali:<br>
+1. Esempio di utilizzo dell'oggetto Precondition (Oggetto utile a verificare i parametri in input ad un metodo e rilanciare eccezzioni nel caso in cui non rispettino le validazioni da noi indicate)<br>
+2. Esempio di utilizzo dell'oggetto CharMatcher (Oggetto utile ad estrarre/sostituire/rimuovere da una stringa solamente i caratteri che rispettano determinati standard)<br>
+3. Esempio di utilizzo dell'oggetto Ordering (Oggetto utile a recuperare alcune informazioni relative all'ordinamento di una lista)<br>
+4. Esempio di utilizzo dell'oggetto MultiMap (è una Map che permette di avere oggetti con la stessa chiave. Una HashMap Java base invece non lo permette)<br>
+5. Esempio di utilizzo degli static costructon (Metodi statici che permettono di istanziare semplicemente Collezioni Java)<br>
