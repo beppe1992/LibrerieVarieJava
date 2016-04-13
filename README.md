@@ -96,7 +96,3 @@ In questo progetto si è approfondita la libreria Guava (sviluppata da Google) c
 3. Esempio di utilizzo dell'oggetto Ordering (Oggetto utile a recuperare alcune informazioni relative all'ordinamento di una lista)<br>
 4. Esempio di utilizzo dell'oggetto MultiMap (è una Map che permette di avere oggetti con la stessa chiave. Una HashMap Java base invece non lo permette)<br>
 5. Esempio di utilizzo degli static costructon (Metodi statici che permettono di istanziare semplicemente Collezioni Java)<br>
-
-# Progetto SpringDataExample
-In questo progetto si è approfondita la libreria SpringDataExample. L'esempio (SpringDataExample.java) mostra l'utilizzo della libreria per l'accesso ai dati di un Database in RAM.
-Per dettagli vedere la pagina su internet https://examples.javacodegeeks.com/enterprise-java/spring/spring-data-tutorial-beginners/
