@@ -41,8 +41,8 @@ Sono stati fatti i seguenti esempi:<br>
 	2. Trigger che gira ogni 5 secondi attraverso un CronTriggerBean<br>
 	3. Trigger che gira da Lunedì a Venerdì alle 8:00 attraverso un CronTriggerBean<br>
 	
-# Progetto VelocityExample
-In questo progetto si è approfondita la libreria Velocity. L'esempio (VelocityTemplate.java) crea una mail utilizzando un template.
+# Progetto MailTemplateExample
+In questo progetto si sono approfondite alcune librerie di mail templating: Velocity e Freemarker. Gli esempi (VelocityTemplate.java e FreemarkerTemplate.java) creano una mail utilizzando un template cone le due diverse librerie.
 	
 # Progetto SpringAopExample
 In questo progetto si sono fatti i seguenti esempi di utilizzo di spring aop:<br>

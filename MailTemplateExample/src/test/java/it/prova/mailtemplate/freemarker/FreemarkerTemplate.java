@@ -1,4 +1,4 @@
-package it.prova.velocity;
+package it.prova.mailtemplate.freemarker;
 
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -10,13 +10,15 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
 
-public class VelocityTemplate {
+import freemarker.template.Configuration;
+
+public class FreemarkerTemplate {
 
 	@Test
 	public void templateEmail() throws Exception {
-		/* first, get and initialize an engine */
-		VelocityEngine ve = new VelocityEngine();
-		ve.init();
+
+		Configuration cfg = new Configuration();
+
 		/* organize our data */
 		ArrayList<String> list = new ArrayList<String>();
 		list.add("linea 1");
@@ -26,17 +28,19 @@ public class VelocityTemplate {
 		list.add("linea 3");
 
 		/* add that list to a VelocityContext */
-		VelocityContext context = new VelocityContext();
-		context.put("lines", list);
-		context.put("header", "Questo e' l'Header");
-		context.put("footer", "Fine");
-		context.put("text", "Messaggio");
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("lines", list);
+		data.put("header", "Questo e' l'Header");
+		data.put("footer", "Fine");
+		data.put("text", "Messaggio");
 
 		/* get the Template */
-		Template t = ve.getTemplate("src/main/resources/template/email.vm");
+		freemarker.template.Template t = cfg
+				.getTemplate("src/main/resources/template/freemarker/email.vm");
+
 		/* now render the template into a Writer */
 		StringWriter writer = new StringWriter();
-		t.merge(context, writer);
+		t.process(data, writer);
 		/* use the output in your email body */
 
 		System.out.println((writer.toString()));

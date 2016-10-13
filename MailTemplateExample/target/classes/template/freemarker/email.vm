@@ -1,0 +1,10 @@
+${header} 
+${text}
+<#list lines as line>
+	<#if line == "">
+		XXX
+	<#else>
+		${line}
+	</#if>
+</#list>
+${footer}
