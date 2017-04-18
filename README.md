@@ -99,3 +99,7 @@ In questo progetto si è approfondita la libreria Guava (sviluppata da Google) c
 
 # Progetto SpringRetryExample
 In questo progetto si è approfondita la libreria SpringRetryExample utile a riprovare la chiamata ad un metodo a fronte di eccezioni.
+
+# Progetto ITextExample
+In questo progetto si è approfondita la libreria IText, in particolare si sono provate le seguenti funzionalità:<br>
+	1. Unione di PDF con ottimizzazione delle risorse (immagini e font uguali vengono salvate come referenze per ottimizzare la dimensione)
