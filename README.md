@@ -103,3 +103,7 @@ In questo progetto si è approfondita la libreria SpringRetryExample utile a rip
 # Progetto ITextExample
 In questo progetto si è approfondita la libreria IText, in particolare si sono provate le seguenti funzionalità:<br>
 	1. Unione di PDF con ottimizzazione delle risorse (immagini e font uguali vengono salvate come referenze per ottimizzare la dimensione)
+
+# Progetto Ghost4JExample
+In questo progetto si è approfondita la libreria Ghost4J, in particolare si sono provate le seguenti funzionalità:<br>
+	1. Unione di PS con ottimizzazione delle risorse (immagini e font uguali vengono salvate come referenze per ottimizzare la dimensione)
