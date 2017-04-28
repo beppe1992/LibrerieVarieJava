@@ -41,9 +41,7 @@ public class ApplicationTest {
 		PdfReader[] readers = { new PdfReader("POSTELMM1.pdf"),
 				new PdfReader("POSTELMM2.pdf"), new PdfReader("POSTELMM3.pdf"),
 				new PdfReader("POSTELMM4.pdf"), new PdfReader("POSTELMM5.pdf"),
-				new PdfReader("POSTELMM6.pdf"), new PdfReader("POSTELMM7.pdf"),
-				new PdfReader("POSTELMM8.pdf"), new PdfReader("POSTELMM9.pdf"),
-				new PdfReader("POSTELMM10.pdf"), };
+				new PdfReader("POSTELMM6.pdf") };
 		createPdf(filename, readers);
 	}
 
