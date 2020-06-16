@@ -5,7 +5,7 @@ package it.prova.springaop.service;
  */
 public class MioSitoService {
 
-    private String login;
+    private String login = "Mario";
 
     public String loginSuMioSito(String username) {
         this.login = username;
