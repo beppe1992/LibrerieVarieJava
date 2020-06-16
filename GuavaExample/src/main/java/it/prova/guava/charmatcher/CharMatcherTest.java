@@ -17,8 +17,7 @@ public class CharMatcherTest {
 
 	/**
 	 * Esempi di utilizzo della classe CharMatcher
-	 * 
-	 * @param args
+	 *
 	 */
 	@Test
 	public void charMatcherTest() {
