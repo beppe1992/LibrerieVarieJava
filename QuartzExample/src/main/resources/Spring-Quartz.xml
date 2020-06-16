@@ -3,52 +3,46 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="inviaMailTask" class="it.quartz.prova.InviaMailTask" />
+
+	<bean id="inviaMailJob" class="it.quartz.prova.InviaMailJob" />
 
 	<!-- Spring Quartz -->
-	<bean name="inviaMailJob" class="org.springframework.scheduling.quartz.JobDetailBean">
-
-		<property name="jobClass" value="it.quartz.prova.InviaMailJob" />
-
-		<property name="jobDataAsMap">
-			<map>
-				<entry key="inviaMailTask" value-ref="inviaMailTask" />
-			</map>
-		</property>
-
+	<bean name="inviaMailJobSchedu" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="inviaMailJob"/>
+		<property name="targetMethod" value="metodoSchedulato"/>
 	</bean>
 
 	<!-- Simple Trigger, run every 5 seconds -->
-	<bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
-		<property name="jobDetail" ref="inviaMailJob" />
+	<bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="inviaMailJobSchedu" />
 		<property name="repeatInterval" value="5000" />
 		<property name="startDelay" value="1000" />
 
 	</bean>
 
 	<!-- Cron Trigger, run every 5 seconds -->
-	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-		<property name="jobDetail" ref="inviaMailJob" />
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="inviaMailJobSchedu" />
 		<property name="cronExpression" value="0/5 * * * * ?" />
 	</bean>
 
 	<!-- Cron Trigger, run at 8:00 from Monday to Friday -->
-	<bean id="recapMailTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-		<property name="jobDetail" ref="inviaMailJob" />
+	<bean id="recapMailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="inviaMailJobSchedu" />
 		<property name="cronExpression" value="0 0 8 ? * MON-FRI *" />
 	</bean>
 
 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-		<property name="jobDetails">
-			<list>
-				<ref bean="inviaMailJob" />
-			</list>
-		</property>
-
 		<property name="triggers">
 			<list>
-				<ref bean="cronTrigger" />
+				<ref bean="cronTrigger"/>
 			</list>
+		</property>
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.threadPool.class">org.quartz.simpl.SimpleThreadPool</prop>
+				<prop key="org.quartz.threadPool.threadCount">1</prop>
+			</props>
 		</property>
 	</bean>
 
