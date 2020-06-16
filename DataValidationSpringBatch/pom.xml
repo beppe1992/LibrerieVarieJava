@@ -12,8 +12,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<SpringBatch.version>2.1.9.RELEASE</SpringBatch.version>
-		<Spring.version>3.1.0.RELEASE</Spring.version>
+		<SpringBatch.version>3.0.10.RELEASE</SpringBatch.version>
+		<Spring.version>4.3.0.RELEASE</Spring.version>
 	</properties>
 
 
@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 
