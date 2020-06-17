@@ -15,7 +15,7 @@
 		dbname="test" />
 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+		<constructor-arg ref="mongoDbFactory" />
 	</bean>
 
 	<!-- Package w/ automagic repositories -->

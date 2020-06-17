@@ -12,8 +12,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<Spring.version>3.2.18.RELEASE</Spring.version>
-		<JUnit.version>4.10</JUnit.version>
+		<Spring.version>5.2.6.RELEASE</Spring.version>
+		<JUnit.version>4.12</JUnit.version>
 	</properties>
 
 	<dependencies>
@@ -79,7 +79,7 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.2.0.RELEASE</version>
+			<version>2.2.7.RELEASE</version>
 		</dependency>
 		
 		<dependency>
