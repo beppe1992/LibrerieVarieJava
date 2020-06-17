@@ -13,21 +13,21 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>4.3.17.RELEASE</version>
+			<version>4.3.19.RELEASE</version>
 		</dependency>
 
 		<!-- QuartzJobBean in spring-context-support.jar -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>4.3.17.RELEASE</version>
+			<version>4.3.19.RELEASE</version>
 		</dependency>
 
 		<!-- Spring + Quartz need transaction -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>4.3.17.RELEASE</version>
+			<version>4.3.19.RELEASE</version>
 		</dependency>
 
 		<!-- Quartz framework -->
