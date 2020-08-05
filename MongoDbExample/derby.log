@@ -1,0 +1,17 @@
+----------------------------------------------------------------
+Tue Jun 16 18:58:34 CEST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0172-be11-762f-00000cfc1678 
+on database directory memory:C:\Development\wks-github\LibrerieVarieJava\MongoDbExample\dataSourceDb2 with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/C:/Users/ars00045/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_121-b13
+user.dir=C:\Development\wks-github\LibrerieVarieJava\MongoDbExample
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+derby.stream.error.method=org.springframework.jdbc.datasource.embedded.OutputStreamFactory.getNoopOutputStream
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Jun 16 18:58:37 CEST 2020:
+Shutting down instance a816c00e-0172-be11-762f-00000cfc1678 on database directory memory:C:\Development\wks-github\LibrerieVarieJava\MongoDbExample\dataSourceDb2 with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 

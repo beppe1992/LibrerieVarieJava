@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="127.0.0.1" />
+	</bean>
+
+	<bean id="baseMailSender" class="it.prova.greenmail.mailsender.BaseMailSenderImpl"
+		scope="singleton">
+		<property name="mailSender" ref="javaMailSender" />
+		<property name="message">
+			<bean class="org.springframework.mail.SimpleMailMessage">
+				<property name="from" value="giuseppe.giordano@prova.it" />
+				<property name="to" value="email.destinatario@prova.it" />
+				<property name="cc" value="email.cc@prova.it" />
+				<property name="subject" value="OGGETTO MAIL PROVA" />
+			</bean>
+		</property>
+		<property name="headerMessage" value="TESTA" />
+		<property name="corpoDelTesto" value="CORPO" />
+		<property name="footerMessage" value="CODA" />
+	</bean>
+
+</beans>

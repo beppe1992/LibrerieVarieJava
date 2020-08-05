@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="filePath">log4j/Test/RollingFileWithFilter</Property>
+		<Property name="fileStorico">${filePath}/storico</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console">
+			<PatternLayout pattern="%msg%n" />
+		</Console>
+		<RollingFile name="RollingFileWithFilter" fileName="${filePath}/RollingFileWithFilter.log"
+			filePattern="${fileStorico}/RollingFileWithFilter-%i.log.zip"
+			immediateFlush="false" append="true">
+			<RegexFilter regex="^aa [\w]+" onMatch="ACCEPT"
+				onMismatch="DENY" />
+			<PatternLayout pattern="%d %p %c{1.} [%t] %m%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+			</Policies>
+			<DefaultRolloverStrategy max="3" />
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="loggerRollingFileWithFilter" level="DEBUG"
+			additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="RollingFileWithFilter" />
+		</Logger>
+	</Loggers>
+</Configuration>

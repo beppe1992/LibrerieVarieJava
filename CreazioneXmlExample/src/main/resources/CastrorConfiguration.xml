@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+                         "http://castor.org/mapping.dtd">
+
+<mapping>
+	<description>Description of the mapping</description>
+
+	<class name="com.arca.creazionexml.xml.Root">
+
+		<map-to xml="ROOT" />
+
+		<field name="parametri" type="com.arca.creazionexml.xml.Parametri">
+			<bind-xml name="PARAMETRI" node="element" />
+		</field>
+
+
+	</class>
+
+
+
+</mapping>
