@@ -12,7 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<Spring.version>5.3.18</Spring.version>
+		<Spring.version>5.3.19</Spring.version>
 		<JUnit.version>4.13.1</JUnit.version>
 	</properties>
 
